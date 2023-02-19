@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-// websocket
+// websocket 挫折挫折あー挫折
 // wss.on('connection', (ws:any) => {
 //     console.log('connect');
 //     // ws.on('message',  (message: string) => {
@@ -41,3 +41,4 @@ app.use('/api/', router)
 app.listen(3000,()=>{
     console.log('ポート3000番で起動しました。 >> http://localhost:3000')
 })
+

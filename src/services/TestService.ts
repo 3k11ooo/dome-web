@@ -13,6 +13,7 @@ let quizAnswer: ITest = {
   answer3: 0,
 }
 
+
 //クラス
 export class TestService {
   // quiz answerのカウントアップ

@@ -65,11 +65,7 @@ router.delete('/test', (req:express.Request, res:express.Response, next) => {
   .catch(next);
 })
 
-// -------------------------------------------------
-//  以下、何のルーティングにもマッチしないorエラー
-// -------------------------------------------------
-
-// いずれのルーティングにもマッチしない(==NOT FOUND)
+// いずれのルーティングにもマッチしない
 app.use((req, res) => {
     res.status(404);
     res.render('error', {
