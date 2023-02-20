@@ -3,7 +3,7 @@ import cors from 'cors';
 import websocket from 'ws';
 
 const app: express.Express = express();
-const wss = new websocket.Server({ port: 8000 });
+// const wss = new websocket.Server({ port: 8000 });
 
 // cors
 app.use(cors());
@@ -38,7 +38,7 @@ app.use('/api/', router)
 
 
 // 3000番ポートでAPIサーバ起動
-app.listen(3000,()=>{
-    console.log('ポート3000番で起動しました。 >> http://localhost:3000')
+app.listen(port,()=>{
+    console.log("port >>", port);
 })
 
