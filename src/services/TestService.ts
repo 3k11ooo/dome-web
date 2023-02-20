@@ -1,16 +1,16 @@
 //インターフェース
 export interface ITest {
   quiz:boolean,
-  answer1: number,
-  answer2: number,
-  answer3: number,
+  ans_red: number,
+  ans_blue: number,
+  ans_green: number,
 }
 
 let quizAnswer: ITest = {
   quiz: false,
-  answer1: 0,
-  answer2: 0,
-  answer3: 0,
+  ans_red: 0,
+  ans_blue: 0,
+  ans_green: 0,
 }
 
 
@@ -21,13 +21,13 @@ export class TestService {
     if(quizAnswer.quiz != false){
       switch(num){
         case 1:
-          quizAnswer.answer1++;
+          quizAnswer.ans_red++;
           break;
         case 2:
-          quizAnswer.answer2++;
+          quizAnswer.ans_blue++;
           break;
         case 3:
-          quizAnswer.answer3++;
+          quizAnswer.ans_green++;
           break;
         default:
           break;
@@ -39,9 +39,9 @@ export class TestService {
   //  quiz初期化
   public async defaultQuiz(quiz: boolean): Promise<ITest> {
     quizAnswer.quiz = quiz;
-    quizAnswer.answer1 = 0;
-    quizAnswer.answer2 = 0;
-    quizAnswer.answer3 = 0;
+    quizAnswer.ans_red = 0;
+    quizAnswer.ans_blue = 0;
+    quizAnswer.ans_green = 0;
     return quizAnswer;
   }
   
